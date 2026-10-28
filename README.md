@@ -6,10 +6,12 @@ This README documents the estimation and testing procedures presented in the pap
 ## Summary of the paper
 
 Understanding the causal effects of organ-specific features from medical imaging on clinical outcomes is essential for biomedical research and patient care. We propose a novel Functional Linear Structural Equation Model (FLSEM) to capture the relationships among clinical outcomes, functional imaging exposures, and scalar covariates like genetics, sex, and age.
+
 $$
-Y_i  = \sum_{\ell=1}^{p} X_{i\ell}\beta_\ell+ \int_{\mathcal T} {\bf Z}_i(t){\bf B}(t) dt + \epsilon_{i}~~~~\mbox{and}~~~~    
+Y_i  = \sum_{\ell=1}^{p} X_{i\ell}\beta_\ell+ \int_{\mathcal T} {\bf Z}_i(t){\bf B}(t) dt + \epsilon_{i} \quad \mbox{and} \quad
 {\bf Z}_i(t) = \sum_{\ell=1}^{p} X_{i\ell} C_\ell (t) +  {\bf E}_{i}(t).
 $$
+
 Traditional methods struggle with the infinite-dimensional nature of exposures and complex covariates. Our FLSEM overcomes these challenges by establishing identifiable conditions using scalar instrumental variables. We develop the Functional Group Support Detection and Root Finding (FGSDAR) algorithm for efficient variable selection, supported by rigorous theoretical guarantees, including selection consistency and accurate parameter estimation. 
 We further propose a test statistic to test the nullity of the functional coefficient ${\bf B}(t)$, establishing its null limit distribution. 
 
